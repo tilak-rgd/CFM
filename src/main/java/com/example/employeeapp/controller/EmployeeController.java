@@ -9,10 +9,13 @@ import com.example.employeeapp.service.EmployeeService;
 
 @RestController
 @RequestMapping("/api/employees")
-@RequiredArgsConstructor
 public class EmployeeController {
 
     private final EmployeeService service;
+
+    public EmployeeController(EmployeeService service) {
+        this.service = service;
+    }
 
     @PostMapping
     public Employee create(@RequestBody Employee employee) {
