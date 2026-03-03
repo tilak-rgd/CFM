@@ -8,10 +8,13 @@ import com.example.employeeapp.entity.Employee;
 import com.example.employeeapp.repository.EmployeeRepository;
 
 @Service
-@RequiredArgsConstructor
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository repository;
+
+    public EmployeeServiceImpl(EmployeeRepository repository) {
+        this.repository = repository;
+    }
 
     public Employee saveEmployee(Employee employee) {
         return repository.save(employee);
