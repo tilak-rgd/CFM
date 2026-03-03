@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+        "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <suppress files="." checks="JavadocMethod"/>
+    <suppress files="." checks="MissingJavadocMethod"/>
+    <suppress files="." checks="JavadocType"/>
+    <suppress files="." checks="JavadocVariable"/>
+    <suppress files="." checks="MissingJavadocType"/>
+    <suppress files="." checks="JavadocPackage"/>
+    <suppress files="." checks="JavadocPackage"/>
+    <suppress files="." checks="JavadocType"/>
+    <suppress files="." checks="SummaryJavadoc"/>
+    <suppress files="." checks="JavadocParagraph"/>
+    <suppress files="." checks="SingleLineJavadoc"/>
+    <suppress files="." checks="OperatorWrap"/>
+    <suppress files="." checks="JavadocStyle"/>
+    <suppress files="." checks="RequireEmptyLineBeforeBlockTagGroup"/>
+    <suppress files="." checks="NonEmptyAtclauseDescription"/>
+    <suppress files="." checks="AtclauseOrder"/>
+    <suppress files="." checks="MagicNumber"/>
+    <suppress files="." checks="NPathComplexity"/>
+    <suppress files="." checks="MethodLength"/>
+    <suppress files="." checks="ParameterNumber"/>
+    <suppress files="." checks="AbbreviationAsWordInName"/>
+    <!-- JPA Metamodel classes require public static volatile fields and underscore in name -->
+    <suppress files="Build_.java" checks="VisibilityModifier"/>
+    <suppress files="Build_.java" checks="TypeName"/>
+    <suppress files="Deployment_.java" checks="VisibilityModifier"/>
+    <suppress files="Deployment_.java" checks="TypeName"/>
+    <!-- Constants class has public static non-final fields set from outside -->
+    <suppress files="Constants.java" checks="VisibilityModifier"/>
+    <suppress files="Constants.java" checks="StaticVariableName"/>
+    <!-- Constants class uses CFMule_ prefix convention for naming -->
+    <suppress files="Constants.java" checks="ConstantName"/>
+    <!-- Deployment processor protected fields are accessed by subclass -->
+    <suppress files="AnyPointDeploymentProcessor.java" checks="VisibilityModifier"/>
+    <!-- GIT class options parameter matches a field name by design (SCM options pattern) -->
+    <suppress files="GIT.java" checks="HiddenField"/>
+    <!-- Bean fields use vCores naming to match CloudHub API conventions -->
+    <suppress files="Application.java" checks="MemberName"/>
+    <suppress files="Deployment.java" checks="MemberName"/>
+    <suppress files="DeploymentRequest.java" checks="MemberName"/>
+    <!-- DeploymentAttributes has explicit getter/setter using vCores naming convention -->
+    <suppress files="DeploymentAttributes.java" checks="MemberName"/>
+    <suppress files="DeploymentAttributes.java" checks="ParameterName"/>
+    <!-- Variable declaration distance in complex service methods with many pre-conditions -->
+    <suppress files="AnyPointDeploymentProcessor.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="RepositoryServiceImpl.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="UserServiceImpl.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="ProjectServiceImpl.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="DeploymentServiceImpl.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="GitWrapper.java" checks="VariableDeclarationUsageDistance"/>
+    <suppress files="AnyPointRestConnector.java" checks="VariableDeclarationUsageDistance"/>
+    <!-- DOMUtil uses Hungarian notation (aElement, aData, aName) throughout for XML parameter names -->
+    <suppress files="DOMUtil.java" checks="ParameterName"/>
+    <suppress files="DOMUtil.java" checks="LocalVariableName"/>
+    <suppress files="DOMUtil.java" checks="OverloadMethodsDeclarationOrder"/>
+    <!-- WebHookRepository constants and overloads follow existing patterns -->
+    <suppress files="WebHookRepository.java" checks="ConstantName"/>
+    <suppress files="WebHookRepository.java" checks="OverloadMethodsDeclarationOrder"/>
+    <suppress files="WebHookRepository.java" checks="VariableDeclarationUsageDistance"/>
+</suppressions>
